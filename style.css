@@ -1,0 +1,80 @@
+@font-face {
+    font-family: vazir;
+    src: url(/font/Vazir-Regular.woff) format("woff");
+}
+*{
+    font-family: vazir;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: #e3f2fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accordion {
+  position: relative;
+  width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.accordion > .content {
+  width: 100%;
+  min-height: 50px;
+  background-color: #fff7f0;
+  border: 1px solid #ffd683;
+  display: block;
+  padding: 15px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: .4s;
+}
+.accordion > .content:nth-child(2) {
+  background-color: #f0faff;
+  border: 1px solid #cceeff;
+}
+.accordion > .content:nth-child(3) {
+  background-color: #fff0f3;
+  border: 1px solid #ffccd6;
+}
+.accordion > .content:nth-child(4) {
+  background-color: #f0f0ff;
+  border: 1px solid #ccccff;
+}
+.accordion > .content > span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+.accordion > .content > span::after {
+  content: '\002b';
+  float: right;
+  font-size: 22px;
+  line-height: 30px;
+  color: #000;
+}
+.accordion > .content.show > span::after {
+  content: '\2212';
+  font-size: 22px;
+  line-height: 30px;
+  color: #000;
+}
+.accordion > .content > div {
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s;
+  padding: 0 15px;
+  font-size: 14px;
+  color: #333;
+}
+.accordion > div.show > div {
+  padding: 15px 1px;
+  font-size: 14px;
+  color: #333;
+}
